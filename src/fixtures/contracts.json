@@ -1,0 +1,64 @@
+{
+    "_data": [
+        {
+            "customer": {
+                "_title": "Babalino",
+                "id": 1,
+                "name": "Customer1"
+            },
+            "id": 11,
+            "name": "Contract A",
+            "_title": "Contract A for 1"
+        },
+        {
+            "customer": {
+                "_title": "XYZ Bla",
+                "id": 2,
+                "name": "Customer2"
+            },
+            "id": 2,
+            "name": "Contract A",
+            "_title": "Contract A for 2"
+        },
+        {
+            "customer": {
+                "_title": "Yet Another Customer",
+                "id": 5,
+                "name": "Customer5"
+            },
+            "id": 3,
+            "name": "Contract B",
+            "_title": "Contract B for 5"
+        },
+        {
+            "customer": {
+                "_title": "Worse of All",
+                "id": 7,
+                "name": "Customer7"
+            },
+            "id": 4,
+            "name": "Contract C",
+            "_title": "Contract C for 7"
+        },
+        {
+            "customer": {
+                "_title": "Worse of All",
+                "id": 7,
+                "name": "Customer7"
+            },
+            "id": 5,
+            "name": "Contract D",
+            "_title": "Contract D for 7"
+        },
+        {
+            "customer": {
+                "_title": "World Champions",
+                "id": 8,
+                "name": "Customer 8"
+            },
+            "id": 6,
+            "name": "Contract D",
+            "_title": "Contract D for 8"
+        }
+    ]
+}

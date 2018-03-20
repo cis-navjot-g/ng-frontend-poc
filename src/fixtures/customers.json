@@ -1,0 +1,44 @@
+{
+    "_data": [
+        {
+            "_title": "Babalino",
+            "id": 1,
+            "name": "Customer1"
+        },
+        {
+            "_title": "XYZ Bla",
+            "id": 2,
+            "name": "Customer2"
+        },
+        {
+            "_title": "DoIt",
+            "id": 3,
+            "name": "Customer3"
+        },
+        {
+            "_title": "Water Enterprises",
+            "id": 4,
+            "name": "Customer 4"
+        },
+        {
+            "_title": "Yet Another Customer",
+            "id": 5,
+            "name": "Customer5"
+        },
+        {
+            "_title": "Best Of All",
+            "id": 6,
+            "name": "Customer6"
+        },
+        {
+            "_title": "Worse of All",
+            "id": 7,
+            "name": "Customer7"
+        },
+        {
+            "_title": "World Champions",
+            "id": 8,
+            "name": "Customer 8"
+        }
+    ]
+}
