@@ -3,17 +3,22 @@ import {CommonModule} from '@angular/common';
 import {ApiService} from './api-service';
 import {ListComponent} from './list/list.component';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { SearchComponent } from './search/search.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
     imports: [
         CommonModule,
-        HttpClientModule
+        HttpClientModule,
+        FormsModule
     ],
     exports: [
-        ListComponent
+        ListComponent,
+        SearchComponent
     ],
     declarations: [
-        ListComponent
+        ListComponent,
+        SearchComponent
     ],
     providers: [
         ApiService,

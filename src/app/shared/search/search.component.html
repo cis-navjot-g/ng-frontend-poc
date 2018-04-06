@@ -1,0 +1,4 @@
+<select *ngIf="filterDefs && filterDefs.length" [(ngModel)]="property">
+    <option *ngFor="let option of filterDefs" value="{{option.key}}">{{option.header}}</option>
+</select>
+<input type="text" placeholder="Search.." name="queryString" [(ngModel)]="queryString" (keyup)="detectChange()"/>
