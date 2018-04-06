@@ -5,11 +5,18 @@ import {EmptyError, HttpError} from './errors/http-error';
 import {IModel} from './models/model';
 import {IData} from './data';
 
+export interface FetchOptions {
+    _query: {
+        property: string,
+        queryString: string
+    };
+ }
+
 export interface IDataService {
     model: IModel;
     data$: Observable<IModel[]>; // Observable stream of data
     error$: Observable<any>;
-    fetch(options?: object): void;
+    fetch(options?: FetchOptions): void;
 }
 
 export abstract class DataService<T extends IModel> implements IDataService {
@@ -47,7 +54,7 @@ export abstract class DataService<T extends IModel> implements IDataService {
      * @param {string} key
      * @param {object} options
      */
-    public fetch(options?: object): void {
+    public fetch(options?: FetchOptions): void {
         // TODO: implement options
         this.apiService.get(this.model.key, options)
             // Transform our of array of JSON IData into Models
@@ -55,7 +62,6 @@ export abstract class DataService<T extends IModel> implements IDataService {
                 return data.map(x => {
                     const model: T = this.newModel();
                     model.populate(x);
-
                     return model;
                 });
             })

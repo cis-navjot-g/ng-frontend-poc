@@ -57,7 +57,6 @@ export class ListComponent implements OnInit {
                 value: val
             };
         }
-
         return mappedRow;
     }
 

@@ -1,9 +1,9 @@
 import {Observable} from 'rxjs/Observable';
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-
+import { FetchOptions } from './data-service';
 export interface IApiService {
-    get(key: string, options?: object): Observable<any[]>;
+    get(key: string, options?: FetchOptions): Observable<any[]>;
 }
 
 /**
@@ -15,7 +15,7 @@ export class ApiService implements IApiService{
         console.log('ApiService constructor!');
     }
 
-    get(key: string, options?: object): Observable<any[]> {
+    get(key: string, options?: FetchOptions): Observable<any[]> {
         const fixturesBase = '/fixtures/';
         console.log(`get for '${key}'...`);
         let url: string;
@@ -31,8 +31,17 @@ export class ApiService implements IApiService{
         }
         url = fixturesBase + url;
         console.log(`get ${url}`);
-
         return this.http.get(url)
-            .map(x => x['_data']);
+            .map(x => {
+                if (options._query.queryString) {
+                    return x['_data'].filter((val) => {
+                        if (options._query.property === 'customer') {
+                            return val[options._query.property]['_title'].includes(options._query.queryString);
+                        }
+                        return val['_title'].includes(options._query.queryString);
+                    });
+                }
+                return x['_data'];
+            });
     }
 }
